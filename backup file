@@ -1,0 +1,57 @@
+
+<html>
+
+<head>
+    <title>Weather Application</title>
+    <!--Custom Css-->
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--Include Jquery for Ajax call-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    
+    </script>
+
+</head>
+
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><img id="logo" src="images/logo.png" style="height:100px;"></li>
+        </ul>    
+    </nav>
+    <div id="back" class="container-fluid">
+            <div class="container">
+        
+            <div  class="row p-5">
+                <div class="col-md-6 col  pull-right">
+                        
+                    <select class="float-right" style="border-radius: 2px;padding: 7px;" id="countrySelect"   required>
+            
+                            <option value="" hidden >Search by</option>
+                            <option value="">City Name</option>
+                            <option value="">City Id</option>
+                            <option value="">geographic coordinates</option>
+                            <option value="">ZIP code</option>
+                    
+                    </select>                                
+                </div>
+                <div class="col-md-6 col ">
+                    <input type="text" style="border-radius: 2px;padding: 6px;width: 220px;" id="location" placeholder="Enter location here" >
+                </div>
+                
+            </div>
+            <div>
+                <img src="images/logo.png" id="weather_image" >
+            </div>
+                    
+            </div>
+    </div>
+    
+
+
+
+    
+    <script src="script/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+
+<html>
+<head>
+    <title>Weather Forcasting Application</title>
+	<!-- this is the code that will allow icon to be visible in the title bar of the brower --> 
+    <link rel="icon" type="image/ico" href="images/logo.png" />
+    <!-- you can also say this:  <link rel="icon" type="image/png" href="location/image.png" /> -->
+    <!--Custom Css-->
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--we are font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Include Jquery for Ajax call-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <!--pooper.js is required for popover-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--Navigation bar-->
+
+    <nav class="container-fluid"><span><ul>
+        <li><img id="logo" src="images/logo.png" style="height:100px;"></li>        
+        </ul></span>
+    </nav>
+
+    <!--Navigation bar end-->
+
+    <div class="divider"></div>
+
+    <!--header-->
+    <div id="back" class="container-fluid " style="background-image:linear-gradient(to bottom, #00c853c9, rgba(141, 194, 111, 0.719)),url('images/gr.jpeg') !important;">
+        <div class="container container-width-65 " >
+            <div class="row info  pt-3 pb-2" >
+                    <div class="col display-4 headding text-center text" >Current weather data</div>         
+            </div>
+            <div class="row info  p-3 " >
+                <div class="col pt-4">
+                    <p class="text-center white-text text" >Access current weather data for any location on Earth including over 200,000 cities! Current weather is frequently updated based on global models and data from more than 40,000 weather stations</p>
+                </div> 
+            </div>   
+            <!--Search bar with different options-->
+            <div class="input-group mt-2 p-3  justify-content-center">
+                <div class="input-group-prepend">
+                    <select class="selectChoice"  id="countrySelect"   required>
+    
+                        <option value="location"  >Search by Location</option>
+                        <option value="city">City Name</option>
+                        <option value="cityId">City Id</option>
+                        <option value="coordinates">geographic coordinates</option>
+                        <option value="zipCode">ZIP code</option>
+                        
+                    </select>
+                </div>
+                <input type="text" id="location" title="Example" data-content="city name,country code or city name eg 1. London,uk   2.London" data-toggle="popover"  placeholder="Enter location here" >
+                <div class="input-group-append justify-content-center">
+                    <i  id="search" class="fa fa-2x fa-search justify-content-center"  aria-hidden="true"></i>
+                </div>
+            </div>
+            <!--Search bar option end-->
+
+
+
+        </div> 
+
+    </div>
+    <!--end of header-->
+            
+        <div class="container mb-5 " style="margin: auto;width:65%;" >
+
+            <div class="row  ">
+                <div class="col">
+                    <img class="justify-content-center mt-5"  src="images/loading_image.gif" id="weather_image" style="height:120px;width:120px;">
+                </div>
+            </div>
+
+            <!--Weather Information -->
+
+            <div class="row  mt-5 infomation-section mb-5" >
+                <div class="col">
+                    <div class="form-group  "  >
+                        <input type="text"  id="result" disabled  style="background-color: rgb(203, 241, 203);border:none; " class="form-control p-4" placeholder="Showing result for City" >
+                    </div>
+                    <div class="form-group">
+                        <label for="weather">Weather:</label>
+                        <input type="text" id="weather" disabled  class="form-control" placeholder="Weather will be display here" >
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <input type="text" id="description" disabled class="form-control" placeholder="Description will be display here " >
+                    </div>
+                    <div class="form-group">
+                        <label for="temperature">temperature:</label>
+                        <input type="text" id="temperature" disabled class="form-control" placeholder="temperature will be display here " >
+                    </div>
+                    <div class="form-group">
+                        <label for="pressure">Pressure:</label>
+                        <input type="text" id="pressure" disabled class="form-control" placeholder="pressure will be display here " >
+                    </div>
+                    <div class="form-group">
+                        <label for="humidity">humidity:</label>
+                        <input type="text" id="humidity" disabled class="form-control" placeholder="humidity will be display here " >
+                    </div>
+                    <div class="form-group float-left" style="width:49%;">
+                        <label for="temp_min">minimum temperature:</label>
+                        <input type="text" id="temp_min" disabled class="form-control" placeholder="minimum temperature " >
+                    </div>
+
+                    <div class="form-group float-right" style="width:49%;">
+
+                        <label for="temp_max">maximum temperature:</label>
+                        <input type="text" id="temp_max" disabled class="form-control" placeholder="maximum temperature  " >
+                    </div>
+                    
+                    <div class="form-group float-left" style="width:49%;">
+                        <label for="wind_speed">Wind speed:</label>
+                        <input type="text" id="wind_speed" disabled class="form-control" placeholder="wind speed  will be display here " >
+                    </div>
+
+                    <div class="form-group float-right " style="width:49%;">
+                        <label for="wind_degree">wind degree:</label>
+                        <input type="text" id="wind_degree" disabled class="form-control" placeholder="wind degree will be display here " >
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="clearfix"></div>
+                        <label for="country_code">country_code:</label>
+                        <input type="text" id="country_code" disabled class="form-control" placeholder="country code will be display here " >
+                    </div>
+                    
+                </div>
+            </div>
+            <!--Weather Information end-->
+        </div>
+        <div class="footer mt-5 text-center">
+            <i class="fa fa-heart fa-2x"></i>
+            <div style="text">Made by : Mohit Singh negi :) Copyright 2019 </div>
+        </div>
+    <!--Some Scripting files and plugins-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="script/main.js"></script>
+</body>
+</html>
+

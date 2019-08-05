@@ -1,0 +1,132 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: #f3f7f7;
+}
+option {
+    outline-color: #E91E63;
+    background:ghostwhite;
+    
+}
+#searchbar{
+    
+    margin-bottom: 30%;
+    height: 200px;
+}
+
+
+img{
+    outline: none;
+}
+#weather_image{
+    border-radius: 38%;
+    background-color: #08f79b;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+ul{
+    position: absolute;
+    top:50%;
+    transform:translateY(-45%);
+    margin-left: 14%;
+    float: left;
+}
+li{
+    
+    color: aliceblue;
+    float: left;
+    list-style: none;
+    text-decoration:none;
+}
+nav{
+    position: relative;
+    background:linear-gradient(#232526,#414345);
+    height:75px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#logo{
+    width:100px;
+    border-radius: 50%;
+    padding:2px;
+    
+}
+input{
+    background: #fff;
+    padding:5px;
+}
+.divider{
+    height:5px;
+    background-color: rgb(110, 107, 108);
+    box-shadow:2px 2px 2px rgb(1,1,1,0.5);
+}
+.selectChoice{
+    background: #03fd6b00;
+    color:#262626;
+    border:1px solid #fff;
+    border-radius: 2px;
+    padding: 8px;
+}
+#search{
+    
+    border:1px solid #fff;
+    padding: 6px;
+    width:50px;
+    background: #42f78db2;
+}
+#location{
+    border:1px solid #fff;
+    padding: 6px;
+}
+.fa{
+    width: 50px;
+    color: aliceblue;
+    scale: 0.7;
+}
+#back{
+    
+    background:#00c853;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-attachment:  fixed !important; 
+    background-size:cover !important;
+    border-bottom: 20px solid greenyellow;
+    
+}
+.container-width-65{
+    width:65%;
+}
+.info{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+}
+.headding{
+    color:#262626;list-style: height 2.5em;
+}
+.white-text{
+    color:aliceblue; 
+}
+.infomation-section{
+    padding:20px; margin: auto;
+    height:100vh;
+}
+.footer{
+    padding: 40px;
+    color:#FFF;
+    height:auto;
+    background: #00c853;
+    border-top:20px solid greenyellow;
+}
+.fa-heart{
+    color:rgb(255, 255, 255);
+   
+}
+.text{
+    line-height: 2em;
+}
